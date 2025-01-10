@@ -1,0 +1,283 @@
+/* life-below-water */
+#life-below-water{
+    background-color: #ffffff; /* ZH頁面背景顏色*/
+}
+body#life-below-water {
+    background-image: url('../images/專案 (20241129061103).png'); /* Replace with your image */
+    background-position: 0 0;
+    background-repeat: repeat; /* Ensures seamless tiling */
+    animation: moveBackground 200s linear infinite; /* Smooth animation */
+}
+#life-below-water nav {
+    background-color: #b1e3fbe8;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin: 0 auto 20px auto; /* 將導航欄框置中，並設置底部外邊距 */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#life-below-water nav a:hover {
+    background-color: #56beffe7;
+    color: rgb(255, 255, 255);
+    padding: 30px 50px;
+}
+
+.button{
+    position: relative;
+    display:inline-block;
+    margin: 30px;
+    margin-left: -3vw; /* 調整左邊距 */
+    margin-top: 1vw; /* 調整上邊距 */
+}
+.button a{
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    font-size:1.2vw;
+    text-align: center;
+    text-decoration:none;
+    background-color:#42bafa;
+    display:block;
+    position:relative;
+    padding:1vw 2vw;
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    box-shadow:inset 0 1px 0 #c4e8ff, 0 10px 0 #145697;
+    border-radius: 5px;
+}  
+.button a:active{
+    top:10px;
+    background-color:#42bafa;
+    box-shadow:inset 0 1px 0 #c4e8ff, inset 0 -3px 0 #145697;
+}
+.button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    border-radius: 5px;
+}
+
+/* Common styles */
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 2000% -2000%; }
+}
+.title-text{
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: #000000;
+    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+    text-align: center;
+    margin: 0;
+    margin-top: -85px;
+    padding: 0;
+    line-height: 1.4;
+    -webkit-text-stroke: 1px rgb(254, 254, 254);  /* 設置文字邊框為1像素寬，顏色為黑色 */
+}
+.square {
+    width: 85vw;
+    height: auto;
+    background-color: #2e0d0d;  /* 根據 ZH 主題顏色設計 */
+    border-radius: 1vw;
+    margin: 0 auto; 
+    position: relative;
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    padding: 20px; /* 添加內邊距 */
+}
+
+.inner-square {
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    width: 80vw;
+    height: auto;
+    background-color: #ffffff;  /* 可以依照主題調整顏色 */
+    padding: 20px; /* 添加內邊距 */
+    border-radius: 3px; /* 可選：設置圓角 */ 
+}
+
+.inner-square-text {
+    text-align: left;
+    color: #333;
+    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+    font-weight: normal;
+    padding: 20px;
+    line-height: 1.5;
+    margin: 0;
+    width: 100%; /* 確保文字區域寬度 */
+}
+
+.goal-title {
+    font-size: 2.5vw; /* 調整文字大小 */
+    font-weight: bold; /* 設置文字為粗體 */
+    color: #000000; /* 設置文字顏色 */
+    text-align: center; /* 將文字置中 */
+    display: block; /* 確保文字區域是塊級元素 */
+    width: 100%; /* 確保文字區域寬度 */
+    padding-top: 25px; /* 設置上邊距 */
+    padding-bottom: 5px; /* 設置下邊距 */
+}
+
+.center-bold {
+    font-size: 1.1vw; /* 調整文字大小 */
+    font-weight: bold; /* 設置文字為粗體 */
+    text-align: center; /* 將文字置中 */
+}
+
+hr.first-hr {
+    border: 0;
+    height: 1px;
+    background: #333; /* 設置橫線顏色 */
+    margin: 30px 0; /* 設置橫線上下邊距 */
+    margin-top: 45px;
+    width: 98%; /* 設置橫線寬度 */
+    ;
+}
+
+hr.dashed-hr {
+    border: 0;
+    border-top: 2px dashed #333; /* 設置虛線橫線 */
+    margin: 30px 0; /* 設置橫線上下邊距 */
+    width: 98%; /* 設置橫線寬度 */
+}
+
+.focus-block {
+    font-size: 1.1vw; /* 調整文字大小 */
+    font-weight: normal; /* 設置文字為正常粗細 */
+    line-height: 2; /* 調整行距 */
+    margin: 20px 0; /* 設置區塊的上下邊距 */
+    padding: 10px; /* 設置區塊的內邊距 */
+    background-color: #ceebffd0; /* 設置區塊的背景顏色 */
+    border: 1px solid #4186ff; /* 設置區塊的邊框 */
+    border-radius: 5px; /* 設置區塊的圓角 */
+    width: 96.5%; /* 設置區塊的寬度 */
+}
+
+.common-block {
+    font-size: 1.1vw; /* 調整文字大小 */
+    font-weight: normal; /* 設置文字為正常粗細 */
+    line-height: 2; /* 調整行距 */
+    margin: 20px 0; /* 設置區塊的上下邊距 */
+    padding: 10px; /* 設置區塊的內邊距 */
+}
+
+
+/*Sharing留言區*/
+.container {     /* 留言區大外框容器 */
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d1f1ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0px;
+}
+.list li {
+    background-color: #ffffff;
+    margin: 25px 0;
+    padding: 15px;
+    border: 3px solid #000000c4;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list li:nth-child(odd) {
+    background-color: #9cd4ff;
+}
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+.form-control {
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.input-container {
+    display: flex;
+    justify-content: center; /* 使輸入框居中 */
+}
+.form-control input {  
+    margin: 20px auto;
+    width: 90%;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #0073ff;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease-in-out; /* 添加過渡效果 */
+}
+/* 輸入框懸浮特效 */
+.form-control input:focus {
+    box-shadow: 0 0 10px rgb(70, 199, 250); /* 設置懸浮時的陰影效果 */
+    outline: none; /* 移除默認的輸入框邊框 */
+}
+/* 新增留言的浮起發光特效 */
+@keyframes float-glow {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+        box-shadow: 0 0 10px rgb(255, 0, 0);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        box-shadow: 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+.list li.new-message {
+    animation: float-glow 0.5s ease-in-out;
+}
+/* 刪除留言的滑走特效 */
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+.list li.slide-out {
+    animation: slide-out 0.5s ease-in-out;
+}
+
+.btn {
+    display: block;
+    width: 100px; /* 設置按鈕寬度 */
+    margin: 5px auto 0; /* 設置按鈕的上下外邊距，並使其居中 */
+    padding: 10px;
+    background-color: #28a745;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:hover {
+    background-color: #218838;
+}

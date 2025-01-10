@@ -1,0 +1,193 @@
+
+/* General body styling */
+#start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+#start-button:active {
+  background-color: #3e8e41; /* Even darker when clicked */
+}
+
+/* Styling for the score display */
+#score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Wrapper to arrange title, game container, and description */
+.game-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align all children horizontally */
+  width: 300px; /* Define a maximum width */
+}
+
+/* Title styling */
+.game-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+body, #game-container {
+  user-select: none; /* Disable text selection */
+}
+/* Game container styling */
+.game-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+   
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  overflow: hidden; /* Ensure the square doesn't move outside */
+  margin-bottom: 20px; /* Space below the game container */
+}
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Background Layers with different z-index */
+.background-layer-one {
+  background-image: url('../images/sky.png'); /* First background image */
+  z-index: 1;
+  opacity: 0.5; /* To make it semi-transparent */
+}
+
+.background-layer-two {
+  background-image: url('../images/LOW bg.png'); /* Second background image */
+  z-index: 2;
+  opacity: 1;
+}
+
+.background-layer-three {
+  background-image: url('../images/下載.png'); /* Third background image */
+  z-index: 3;
+  opacity: 1;
+}
+#debug-info {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+#detector {
+  position: absolute;  /* Position it relative to the game container */
+  width: 25px;         /* Width of the detector */
+  height: 500px;       /* Height of the detector */
+  background-color: red;
+  background-image: url('../images/chain.png');
+  background-size: contain; 
+  background-repeat: repeat-y; 
+  visibility: hidden ;
+  z-index: 2;        /* Initial position on the Y-axis */
+}
+#hook {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+background-size: contain;
+  z-index: 2;  /* Top layer */
+  background-image: url('../images/1c4c7f1d310a56d37fa1b22e32101630.png');
+  background-size: 50 50px; /* Width of all frames, height of one frame */
+  transition: background-position 0.1s ease; /* Smooth transition for sprite animation */
+  
+}
+
+
+/* Square inside the game container */
+#fish {
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  z-index: 10;
+  background-image: url('../images/shark (2).png');
+  background-size: 200px 50px; /* Adjust based on your sprite sheet */
+  transition: background-position 0.1s ease, transform 0.3s ease; /* Add transform transition for smooth flipping */
+}
+
+.box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  background-image: url('../images/ocean junk.png');
+  background-size: 50px 50px; /* Width of all frames, height of one frame */
+    
+}
+#boat {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  background-repeat: no-repeat;
+background-size: cover;
+
+  background-image: url('../images/pngwing.com.png');
+  background-size: 200px 200px; /* Width of all frames, height of one frame */
+   
+  transition: background-position 0.1s ease; /* Smooth transition for sprite animation */
+}
+
+
+/* Define different background positions for the sprite frames */
+.square-up {
+  background-position: 0 0; /* First frame for moving up */
+}
+
+.square-down {
+  background-position: -50px 0; /* Second frame for moving down */
+}
+
+.square-left {
+  background-position: -100px 0; /* Third frame for moving left */
+}
+
+.square-right {
+  background-position: -150px 0; /* Fourth frame for moving right */
+}
+
+
+.game-description {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  max-height: 150px; /* Limit height to make it scrollable */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

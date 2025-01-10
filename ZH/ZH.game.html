@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Hunger Game</title>
+    <link rel="stylesheet" href="../common.style.css">
+    <link rel="stylesheet" href="ZH.style.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="zero-hunger">
+    <div class="zero-hunger">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="ZH.html">Introduction</a></li>
+                    <li><a href="ZH.game.html">Game</a></li>
+                    <li><a href="ZH.news.html">News</a></li>
+                    <li><a href="ZH.sharing.html">Sharing</a></li>
+                </ul>
+            </nav>
+            <div class="button">
+                <a href="../index.html">Back</a>
+            </div>
+        </header>
+        <p class="title-text">Zero Hunger</p>
+        <div id="intro">
+           <div class="square">
+             
+                <div class="inner-square">
+                    <body>
+                        <div>
+                            <canvas id="myCanvas" width="800" height="600"></canvas>
+                            <p id="talkBox"></p>
+                        </div>
+                        <script src="https://unpkg.com/jquery"></script>
+                        <script src="main.js"></script>
+                    </body>
+
+                </div>
+            <div id="game" style="display:none;"></div>
+            <div id="news" style="display:none;"></div>
+            <div id="sharing" style="display:none;"></div>
+        </div>
+    </div>
+</body>
+</html>
