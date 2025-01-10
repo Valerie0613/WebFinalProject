@@ -1,0 +1,86 @@
+#game-space {
+    display: flex; /* Make it visible immediately */
+}
+
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.stage-image {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    max-height: 100%; /* Ensures the image does not exceed the container's height */
+    object-fit: contain; /* Scales the image proportionally to fit inside the container */
+    display: block; /* Removes any inline spacing issues */
+    margin: 0 auto; /* Centers the image horizontally if needed */
+}
+.interaction-area {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+#resetButton {
+    display: inline-block;
+    padding: 20px 20px;
+    margin: 20px auto;
+    background-color: #ff4c4c; /* Red color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.dialogue-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dialogue-box {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.item {
+    cursor: pointer;
+    width: 80%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f37190;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: #fbb1bd;
+}
+
+#click-button {
+    padding: 10px 20px;
+    background-color: #fe6678;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#click-button:hover {
+    background-color: #ff8a9e;
+}
