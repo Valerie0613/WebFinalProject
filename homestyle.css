@@ -1,0 +1,92 @@
+body,html{
+    height: 100%;
+    margin: 0;  /*將html和body的邊距設置為 0，這樣可以去除默認的邊距，讓內容完全貼合邊緣*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(219, 240, 253);
+
+    /*background-image: url('images/unnamed.png');  指定背景圖片的路徑 
+    background-size: cover;  使背景圖片覆蓋整個元素 
+    height: 100vh;  高度自動調整以適應內容 
+    background-position:center;  將背景圖片居中 
+    background-repeat: no-repeat;  不重複背景圖片 */
+}
+
+.container /*.container 是包裹四個 .box 元素的父元素，它會控制四個方框的排列方式。*/
+{
+    display: grid; /*這將 .container 設置為 CSS Grid 容器，這意味著它的子元素（即 .box）將根據格狀佈局進行排列*/
+    grid-template-columns: repeat(2,350px); /*設定了.container 中列的數量和寬度。這裡 repeat(2, 150px) 表示有兩列，每列的寬度是 150px*/
+    grid-template-rows: repeat(2,220px); /*設定了.container 中行的數量和高度。repeat(2, 150px) 表示有兩行，每行的高度是 150px。*/
+    gap: 50px; /*這行設置了網格中的單元格之間的間距，水平和垂直的間距都是45px。這樣會讓四個方框之間有一定的間隔*/
+}
+.box{
+    display: flex;
+    justify-content: center; /*讓box內的內容（字母）在水平方向上居中*/
+    align-items: center; /*會讓 .box 內的內容（字母）在垂直方向上居中*/
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 2.0em;
+    line-height: 1.1;
+    cursor: pointer; /*當用戶將鼠標懸停在.box 上時，光標會變為手型，表示這是可點擊的元素。*/
+    text-decoration: none; /* 去除文字下劃線 */
+    flex-direction: column; /* 改成垂直方向排列圖片和文字 */
+}
+.box-a{
+    background-color:rgb(255, 255, 255);
+    border: 15px solid rgb(255, 152, 41);
+}
+.box-a img {
+    max-width: 90%; /* 只對 .box-a 內的圖片設置 */
+    max-height: 70%; /* 限制圖片高度，保持比例 */
+    object-fit: contain; /* 保持圖片比例 */
+}
+
+.box-b{
+    background-color:rgb(255, 255, 255);
+    border: 15px solid rgba(255, 118, 150, 0.886);
+}
+.box-b img {
+    max-width: 90%; /* 只對 .box-a 內的圖片設置 */
+    max-height: 70%; /* 限制圖片高度，保持比例 */
+    object-fit: contain; /* 保持圖片比例 */
+}
+
+.box-c{
+    background-color:rgb(255, 255, 255);
+    border: 15px solid rgb(55, 135, 247);
+}
+.box-c img {
+    max-width: 90%; /* 只對 .box-a 內的圖片設置 */
+    max-height: 70%; /* 限制圖片高度，保持比例 */
+    object-fit: contain; /* 保持圖片比例 */
+}
+
+.box-d{
+    background-color:rgb(255, 255, 255);
+    border: 15px solid rgb(117, 202, 78);
+}
+.box-d img {
+    max-width: 90%; /* 只對 .box-a 內的圖片設置 */
+    max-height: 70%; /* 限制圖片高度，保持比例 */
+    object-fit: contain; /* 保持圖片比例 */
+}
+
+.box {
+    display: flex; /* 確保使用 flex 來排列內容 */
+    flex-direction: column; /* 垂直排列圖片和文字 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    text-align: center; /* 文字居中 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 添加過渡效果 */
+}
+
+.box:hover {
+    transform: scale(1.05); /* 懸停時放大5% */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 懸停時增加陰影 */
+}
+
+.box:active {
+    transform: scale(0.95); /* 點擊時縮小5% */
+}
+

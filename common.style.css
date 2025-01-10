@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    height: 55vh;
+    margin: 0;
+}
+
+nav {
+    width: 100%; /* 設置 nav 的寬度 */
+    max-width: 1200px; /* 設置 nav 的最大寬度 */
+    margin: 0 auto; /* 使 nav 居中 */
+    padding: 0 20px; /* 添加內邊距，避免緊貼邊緣 */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(130, 126, 126, 0.5);
+    text-decoration: none;
+    color: #4d4a4a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.video-container {
+    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.video-container video {
+    border-radius: 1.5vw;
+    max-width: 70%;
+    height: auto;
+    border: 5px solid #f8f8f8;  /* 設置邊框，顏色可以根據需求改變 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* 加入陰影效果讓邊框更突出 */
+}
